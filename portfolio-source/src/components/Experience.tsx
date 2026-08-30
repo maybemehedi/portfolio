@@ -50,13 +50,13 @@ const Experience = () => {
                 </div>
                 <span className="text-sm text-primary font-mono">{exp.duration}</span>
               </div>
-              
+
               {/* Title & Company */}
               <h3 className="font-mono text-lg font-bold text-foreground mb-1">
                 {exp.title}
               </h3>
               <p className="text-foreground/60 font-mono text-sm mb-5">{exp.company}</p>
-              
+
               {/* Achievements */}
               <ul className="space-y-3">
                 {exp.achievements.map((achievement, i) => (
