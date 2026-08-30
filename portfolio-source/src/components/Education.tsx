@@ -11,13 +11,13 @@ const education = [
     institution: "Cantonment College Jashore",
     degree: "HSC Batch-24",
     status: "Completed",
-    gpa: "5.00",
+    gpa: null,
   },
   {
     institution: "Police Line Secondary School Jashore",
     degree: "SSC Batch-22",
     status: "Completed",
-    gpa: "5.00",
+    gpa: null,
   },
 ];
 
@@ -30,14 +30,15 @@ const Education = () => {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-wide">
             <span className="text-primary font-mono">&gt;</span> Education
           </h2>
+
           <span className="flex-1 h-px bg-primary/30"></span>
         </div>
 
         {/* Education List */}
         <div className="space-y-4">
           {education.map((edu, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative flex items-center gap-4 md:gap-6 p-4 md:p-5 rounded-2xl bg-card border border-primary/40 shadow-[0_0_25px_hsl(var(--primary)/0.15),inset_0_2px_4px_hsl(0_0%_0%/0.3)] hover:shadow-[0_0_40px_hsl(var(--primary)/0.3)] hover:border-primary transition-all duration-500"
             >
               {/* Icon Box */}
@@ -50,16 +51,18 @@ const Education = () => {
                 <h4 className="font-mono font-bold text-foreground text-base md:text-lg truncate">
                   {edu.institution}
                 </h4>
+
                 <p className="text-foreground/60 text-sm font-mono">
                   {edu.degree}
                 </p>
               </div>
 
-              {/* Status & GPA */}
+              {/* Status */}
               <div className="flex-shrink-0 text-right">
                 <p className="text-foreground/60 text-sm font-mono">
                   {edu.status}
                 </p>
+
                 {edu.gpa && (
                   <p className="text-primary font-mono font-bold text-sm">
                     GPA: {edu.gpa}
