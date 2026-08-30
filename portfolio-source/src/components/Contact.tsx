@@ -4,7 +4,6 @@ import {
   MapPin,
   Phone,
   Linkedin,
-  Facebook,
 } from "lucide-react";
 
 const contactCards = [
@@ -39,22 +38,7 @@ const Contact = () => {
     <section id="contact" className="pt-32 pb-24 bg-background">
       <div className="section-container">
 
-        {/* Logo & Name Header */}
-        <div className="flex flex-col items-center mb-8">
-          <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center font-mono text-2xl font-bold mb-4">
-            MH
-          </div>
-
-          <h3 className="text-xl font-semibold text-foreground">
-            MEHEDI HASAN
-          </h3>
-
-          <p className="text-muted-foreground text-sm mt-1">
-            Cybersecurity Enthusiast
-          </p>
-        </div>
-
-        {/* Terminal-style header */}
+        {/* Contact Header */}
         <div className="mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-wide flex items-center gap-2">
             <span className="text-primary font-mono">&gt;</span>
@@ -75,13 +59,17 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Contact Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-8">
+        {/* Contact Cards */}
+        <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10">
           {contactCards.map((card) => (
             <a
               key={card.label}
               href={card.href}
-              target={card.href.startsWith("http") ? "_blank" : undefined}
+              target={
+                card.href.startsWith("http")
+                  ? "_blank"
+                  : undefined
+              }
               rel={
                 card.href.startsWith("http")
                   ? "noopener noreferrer"
@@ -89,11 +77,14 @@ const Contact = () => {
               }
               className="group relative flex items-center gap-4 p-5 rounded-2xl bg-card border border-primary/40 shadow-[0_0_25px_hsl(var(--primary)/0.15),inset_0_2px_4px_hsl(0_0%_0%/0.3)] hover:shadow-[0_0_40px_hsl(var(--primary)/0.3)] hover:border-primary transition-all duration-500"
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl border-2 border-primary/50 bg-primary/10 text-primary group-hover:bg-primary/20 transition-all duration-500">
+
+              {/* Icon */}
+              <div className="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-xl border-2 border-primary/50 bg-primary/10 text-primary group-hover:bg-primary/20 transition-all duration-500">
                 <card.icon className="w-7 h-7" />
               </div>
 
-              <div className="flex-1">
+              {/* Text */}
+              <div className="flex-1 min-w-0">
                 <p className="text-xs text-primary font-mono tracking-widest mb-1 uppercase">
                   {card.label}
                 </p>
@@ -103,11 +94,12 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Decorative corner accents */}
+              {/* Corner accents */}
               <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-primary/40 rounded-tl" />
               <div className="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-primary/40 rounded-tr" />
               <div className="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-primary/40 rounded-bl" />
               <div className="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-primary/40 rounded-br" />
+
             </a>
           ))}
         </div>
@@ -119,53 +111,6 @@ const Contact = () => {
           <span className="font-mono text-sm">
             Dhaka, Bangladesh
           </span>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex items-center justify-center gap-4 mt-10">
-
-          {/* GitHub */}
-          <a
-            href="https://github.com/maybemehedi"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="w-12 h-12 flex items-center justify-center rounded-xl border border-primary/40 bg-card text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300"
-          >
-            <Github className="w-5 h-5" />
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/mehedihasanbadhon/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="w-12 h-12 flex items-center justify-center rounded-xl border border-primary/40 bg-card text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300"
-          >
-            <Linkedin className="w-5 h-5" />
-          </a>
-
-          {/* Facebook */}
-          <a
-            href="https://www.facebook.com/maybemehedii"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="w-12 h-12 flex items-center justify-center rounded-xl border border-primary/40 bg-card text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300"
-          >
-            <Facebook className="w-5 h-5" />
-          </a>
-
-          {/* Email */}
-          <a
-            href="mailto:hellomehedihasan2006@gmail.com"
-            aria-label="Email"
-            className="w-12 h-12 flex items-center justify-center rounded-xl border border-primary/40 bg-card text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300"
-          >
-            <Mail className="w-5 h-5" />
-          </a>
-
         </div>
 
       </div>

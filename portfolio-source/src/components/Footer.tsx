@@ -1,56 +1,75 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
   return (
-    <footer className="py-12 border-t border-primary/30 bg-card/50">
+    <footer className="bg-background border-t border-primary/30 py-12">
       <div className="section-container">
-        <div className="flex flex-col items-center text-center gap-6">
-          {/* Name and Title */}
-          <div>
-            <h3 className="font-display text-xl font-bold text-foreground mb-1">
-              Mehedi Hasan
-            </h3>
-            <p className="text-primary font-mono text-sm">
-              Cybersecurity Enthusiast
-            </p>
-          </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="p-3 rounded-xl border border-primary/40 bg-primary/10 text-primary hover:bg-primary/20 hover:shadow-[0_0_15px_hsl(var(--primary)/0.3)] transition-all duration-300" 
-              aria-label="GitHub"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="p-3 rounded-xl border border-primary/40 bg-primary/10 text-primary hover:bg-primary/20 hover:shadow-[0_0_15px_hsl(var(--primary)/0.3)] transition-all duration-300" 
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a 
-              href="mailto:hellomehedihasan2006@gmail.com" 
-              className="p-3 rounded-xl border border-primary/40 bg-primary/10 text-primary hover:bg-primary/20 hover:shadow-[0_0_15px_hsl(var(--primary)/0.3)] transition-all duration-300" 
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-          </div>
+        {/* Name */}
+        <div className="text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground font-mono">
+            Mehedi Hasan
+          </h3>
 
-          {/* Copyright */}
-          <p className="text-sm text-foreground/50 font-mono">
-            © {currentYear} Mehedi Hasan. All rights reserved.
+          {/* Title */}
+          <p className="text-primary font-mono text-base md:text-lg mt-2">
+            Cybersecurity Enthusiast
           </p>
         </div>
+
+        {/* Social Links */}
+        <div className="flex items-center justify-center gap-4 mt-8">
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/maybemehedi"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="w-14 h-14 flex items-center justify-center rounded-xl border border-primary/50 bg-card text-primary hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)] transition-all duration-300"
+          >
+            <Github className="w-7 h-7" />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/mehedihasanbadhon/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="w-14 h-14 flex items-center justify-center rounded-xl border border-primary/50 bg-card text-primary hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)] transition-all duration-300"
+          >
+            <Linkedin className="w-7 h-7" />
+          </a>
+
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/maybemehedii"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="w-14 h-14 flex items-center justify-center rounded-xl border border-primary/50 bg-card text-primary hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)] transition-all duration-300"
+          >
+            <FaFacebookF className="w-6 h-6" />
+          </a>
+
+          {/* Email */}
+          <a
+            href="mailto:hellomehedihasan2006@gmail.com"
+            aria-label="Email"
+            className="w-14 h-14 flex items-center justify-center rounded-xl border border-primary/50 bg-card text-primary hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_25px_hsl(var(--primary)/0.3)] transition-all duration-300"
+          >
+            <Mail className="w-7 h-7" />
+          </a>
+
+        </div>
+
+        {/* Copyright */}
+        <p className="text-center text-foreground/40 font-mono text-sm mt-10">
+          © 2026 Mehedi Hasan. All rights reserved.
+        </p>
+
       </div>
     </footer>
   );
