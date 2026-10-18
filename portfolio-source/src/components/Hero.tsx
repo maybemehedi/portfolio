@@ -20,7 +20,7 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
-      
+
       {/* Decorative elements */}
       <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -51,9 +51,9 @@ const Hero = () => {
 
           {/* Social Links - Enhanced */}
           <div className="animate-fade-in-up animation-delay-250 flex items-center justify-center gap-6 mb-5">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
+            <a
+              href="https://github.com/maybemehedi"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground/80 hover:text-primary hover:shadow-[0_0_15px_hsl(var(--primary)/0.4)] transition-all duration-300 text-base font-mono px-2 py-1 rounded-lg"
             >
@@ -61,9 +61,9 @@ const Hero = () => {
               GitHub
             </a>
             <span className="text-primary/60 text-lg">•</span>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/mehedihasanbadhon"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground/80 hover:text-primary hover:shadow-[0_0_15px_hsl(var(--primary)/0.4)] transition-all duration-300 text-base font-mono px-2 py-1 rounded-lg"
             >
@@ -71,7 +71,7 @@ const Hero = () => {
               LinkedIn
             </a>
             <span className="text-primary/60 text-lg">•</span>
-            <a 
+            <a
               href="mailto:hellomehedihasan2006@gmail.com"
               className="flex items-center gap-2 text-foreground/80 hover:text-primary hover:shadow-[0_0_15px_hsl(var(--primary)/0.4)] transition-all duration-300 text-base font-mono px-2 py-1 rounded-lg"
             >
